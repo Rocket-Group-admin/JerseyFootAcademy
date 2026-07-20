@@ -2,12 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
-import { products, effectivePrice } from "@/data/products";
+import { productBySlug, effectivePrice } from "@/data/products";
 import { Price } from "@/components/ui/price";
 
-/** Prominent launch-offer banner for the first `isFeatured` product. */
+// Several demo products in the catalogue also carry `isFeatured: true`, so
+// this banner targets the launch offer by slug rather than the first match.
+const FEATURED_SLUG = "spain-exclusive-2026";
+
+/** Prominent launch-offer banner for the current storewide exclusive. */
 export async function ExclusiveOffer() {
-  const product = products.find((p) => p.isFeatured);
+  const product = productBySlug.get(FEATURED_SLUG);
   if (!product) return null;
 
   const t = await getTranslations("home");
