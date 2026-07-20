@@ -6,12 +6,24 @@ import { useTranslations } from "next-intl";
 import { CheckCircle2 } from "lucide-react";
 import { useCart } from "@/lib/cart-store";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 export default function CheckoutSuccessPage() {
   const t = useTranslations("ui");
+  const subtotal = useCart((s) => s.subtotal);
   const clear = useCart((s) => s.clear);
   useEffect(() => {
+    const value = subtotal();
+    if (value > 0) {
+      window.fbq?.("track", "Purchase", { value: value / 100, currency: "EUR" });
+    }
     clear();
-  }, [clear]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="container-page py-24 text-center">

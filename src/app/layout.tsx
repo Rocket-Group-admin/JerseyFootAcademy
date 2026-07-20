@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Providers } from "@/components/providers";
+import { MetaPixel } from "@/components/meta-pixel";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -65,6 +66,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable} ${anton.variable}`}>
       <body className="flex min-h-screen flex-col">
+        <MetaPixel />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <Header />
