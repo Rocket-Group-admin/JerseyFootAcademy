@@ -2150,7 +2150,7 @@ const REAL_IMAGES: Record<string, string[]> = {
   "argentina-home-2026": ["/products/argentina-home-2026-front.jpg", "/products/argentina-home-2026-back.jpg"],
   "germany-home-2026": ["/products/germany-home-2026-front.jpg", "/products/germany-home-2026-back.jpg"],
   "brazil-home-2026": ["/products/brazil-home-2026-front.jpg", "/products/brazil-home-2026-back.jpg"],
-  "spain-home-2026": ["/products/spain-home-2026-front.jpg", "/products/spain-home-2026-back.jpg"],
+  "spain-home-2026": ["/products/spain-home-2026-front.webp", "/products/spain-home-2026-back.jpg"],
   "spain-exclusive-2026": ["/products/spain-exclusive-2026-front.webp", "/products/spain-exclusive-2026-back.webp"],
   "france-home-2026": ["/products/france-home-2026-front.jpg", "/products/france-home-2026-back.jpg"],
   "england-home-2026": ["/products/england-home-2026-front.jpg", "/products/england-home-2026-back.jpg"],
