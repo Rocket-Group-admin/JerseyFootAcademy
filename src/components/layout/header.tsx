@@ -29,7 +29,9 @@ export function Header() {
       {/* Top utility bar */}
       <div className="bg-navy text-white/80">
         <div className="container-page flex h-9 items-center justify-between text-xs">
-          <p className="hidden sm:block">✈️ {tu("shipBanner")}</p>
+          <p className="hidden sm:block">
+            ✈️ {tu("shipBanner")} <span className="text-white/30">·</span> 🎁 {tu("promoBanner")}
+          </p>
           <div className="flex items-center gap-1">
             <LanguageSwitcher />
             <span className="text-white/20">|</span>
