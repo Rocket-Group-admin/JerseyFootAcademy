@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
+import { VictoryBanner } from "@/components/home/victory-banner";
 import { ExclusiveOffer } from "@/components/home/exclusive-offer";
 import { FeatureBar } from "@/components/home/feature-bar";
 import { Faq } from "@/components/home/faq";
@@ -24,6 +25,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <VictoryBanner />
       <ExclusiveOffer />
       <FeatureBar />
 
