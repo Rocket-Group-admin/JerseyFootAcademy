@@ -1,0 +1,78 @@
+/* Per-team flocking fonts (Google Fonts, SIL OFL — free for commercial use). */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Teko:wght@600;700&family=Saira+Condensed:wght@700;800&family=Rajdhani:wght@600;700&family=Archivo+Black&family=Bebas+Neue&family=Russo+One&family=Saira+Stencil+One&display=swap");
+@import "tailwindcss";
+
+/* House flocking font (derived from Bebas Neue, SIL OFL — see /fonts/…-LICENSE.txt). */
+@font-face {
+  font-family: "JerseyFoot Display";
+  src: url("/fonts/JerseyFootDisplay.woff2") format("woff2"),
+       url("/fonts/JerseyFootDisplay.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* France team flocking font (derived from Chakra Petch, SIL OFL). */
+@font-face {
+  font-family: "France Home 2026";
+  src: url("/fonts/FranceHome2026.woff2") format("woff2"),
+       url("/fonts/FranceHome2026.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   JerseyFootAcademy — "Vif & sportif" (White · Electric Red · Royal Blue · Gold)
+   ───────────────────────────────────────────────────────────────────────── */
+@theme {
+  --color-navy: #0a1b6b;
+  --color-navy-800: #081556;
+  --color-navy-700: #1235a8;
+  --color-navy-600: #1f4ddb;
+  --color-gold: #ffd23f;
+  --color-gold-light: #ffe27a;
+  --color-red: #ff2e4d;
+  --color-red-light: #ff5a72;
+  --color-cream: #ffffff;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anton), var(--font-poppins), sans-serif;
+
+  --radius-xl: 1rem;
+  --shadow-soft: 0 12px 40px -12px rgb(10 27 107 / 0.28);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.6s ease both;
+  --animate-shine: shine 3s linear infinite;
+}
+
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+@keyframes shine { to{background-position:200% center} }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream text-navy antialiased; font-family: var(--font-sans); }
+  h1,h2,h3,h4,.font-display { font-family: var(--font-display); letter-spacing: 0.01em; }
+  ::selection { background: var(--color-red); color: #fff; }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-red px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-red-light hover:shadow-lg active:scale-[0.98]; }
+  .btn-gold { @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-navy transition hover:bg-gold-light active:scale-[0.98]; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-navy/15 bg-white px-6 py-3 text-sm font-semibold text-navy transition hover:border-red hover:text-red; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wide; }
+  .gold-text { background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: var(--animate-shine); }
+}
+
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { background: #fff; }
+  .print-card { box-shadow: none !important; border: 1px solid #e5e5e5 !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
