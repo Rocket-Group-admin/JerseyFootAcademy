@@ -70,7 +70,11 @@
     "newsletterText": "Accédez en avant-première aux nouveaux maillots et aux exclusivités Coupe du Monde.",
     "newsletterCta": "S'abonner",
     "faq": "Questions fréquentes",
-    "partners": "La confiance des fans du monde entier"
+    "partners": "La confiance des fans du monde entier",
+    "exclusiveOfferBadge": "Offre spéciale",
+    "exclusiveOfferTag": "Nouveau",
+    "exclusiveOfferText": "Un lancement exclusif à prix cassé — pour un temps limité seulement.",
+    "exclusiveOfferCta": "Je profite de l'offre"
   },
   "features": {
     "shipping": "Livraison internationale",

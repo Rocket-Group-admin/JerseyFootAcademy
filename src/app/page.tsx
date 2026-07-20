@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
+import { ExclusiveOffer } from "@/components/home/exclusive-offer";
 import { FeatureBar } from "@/components/home/feature-bar";
 import { Faq } from "@/components/home/faq";
 import { NewsletterForm } from "@/components/home/newsletter-form";
@@ -23,6 +24,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <ExclusiveOffer />
       <FeatureBar />
 
       {/* World Cup promo band */}

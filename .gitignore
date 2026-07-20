@@ -2,3 +2,5 @@ node_modules
 .next
 out
 .env
+next-env.d.ts
+tsconfig.tsbuildinfo

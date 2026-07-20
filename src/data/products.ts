@@ -356,6 +356,24 @@ export const products: ProductSeed[] = [
     stock: fullStock,
   },
   {
+    name: "Spain National Team Exclusive Launch Offer 2026",
+    slug: "spain-exclusive-2026",
+    description:
+      "La Roja, exclusive launch edition. Limited-time offer to celebrate the World Cup 2026 collection.",
+    basePrice: 8900,
+    salePrice: 4900,
+    categorySlug: "spain-nt",
+    competition: "World Cup 2026",
+    season: "2026",
+    year: 2026,
+    isWorldCup: true,
+    isNew: true,
+    isOnSale: true,
+    isFeatured: true,
+    images: gallery(1, 2),
+    stock: fullStock,
+  },
+  {
     name: "Germany National Team Home 2026",
     slug: "germany-home-2026",
     description: "Die Mannschaft. Iconic white with black trim, four stars above the eagle.",
@@ -2156,6 +2174,11 @@ const REAL_IMAGES: Record<string, string[]> = {
 // Shown for every jersey that doesn't have real photography yet.
 const COMING_SOON_IMAGE = "/products/coming-soon.jpg";
 
+// Hand-curated launch offers: keep their authored price/sale/merchandising
+// flags instead of the uniform demo pricing below. Falls back to a colorway
+// placeholder until real product photography is added to REAL_IMAGES.
+const EXCLUSIVE_OFFER_SLUGS = new Set<string>(["spain-exclusive-2026"]);
+
 /**
  * Products with real photos (REAL_IMAGES) keep their gallery. Every other
  * product is marked "coming soon": a placeholder image, price 0, and no
@@ -2164,6 +2187,10 @@ const COMING_SOON_IMAGE = "/products/coming-soon.jpg";
  */
 function assignPlaceholderImages() {
   for (const p of products) {
+    if (EXCLUSIVE_OFFER_SLUGS.has(p.slug)) {
+      p.images = REAL_IMAGES[p.slug] ?? [`${P}/jersey-red.svg`, `${P}/jersey-red.svg`];
+      continue;
+    }
     if (REAL_IMAGES[p.slug]) {
       p.images = REAL_IMAGES[p.slug];
       p.basePrice = 3990; // uniform €39.90 for available jerseys

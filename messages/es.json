@@ -70,7 +70,11 @@
     "newsletterText": "Accede primero a las nuevas equipaciones y exclusivas del Mundial.",
     "newsletterCta": "Suscribirse",
     "faq": "Preguntas frecuentes",
-    "partners": "La confianza de los aficionados de todo el mundo"
+    "partners": "La confianza de los aficionados de todo el mundo",
+    "exclusiveOfferBadge": "Oferta especial",
+    "exclusiveOfferTag": "Nuevo",
+    "exclusiveOfferText": "Un lanzamiento exclusivo a precio especial — por tiempo limitado.",
+    "exclusiveOfferCta": "Aprovechar la oferta"
   },
   "features": {
     "shipping": "Envío internacional",

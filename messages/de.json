@@ -70,7 +70,11 @@
     "newsletterText": "Erhalte frühen Zugang zu neuen Trikots und exklusiven WM-Drops.",
     "newsletterCta": "Abonnieren",
     "faq": "Häufige Fragen",
-    "partners": "Vertraut von Fans weltweit"
+    "partners": "Vertraut von Fans weltweit",
+    "exclusiveOfferBadge": "Sonderangebot",
+    "exclusiveOfferTag": "Neu",
+    "exclusiveOfferText": "Ein exklusives Launch-Angebot zum Sonderpreis — nur für kurze Zeit.",
+    "exclusiveOfferCta": "Angebot sichern"
   },
   "features": {
     "shipping": "Internationaler Versand",

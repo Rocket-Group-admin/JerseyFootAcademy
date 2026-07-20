@@ -70,7 +70,11 @@
     "newsletterText": "Krijg als eerste toegang tot nieuwe shirts en exclusieve WK-drops.",
     "newsletterCta": "Aanmelden",
     "faq": "Veelgestelde vragen",
-    "partners": "Vertrouwd door fans wereldwijd"
+    "partners": "Vertrouwd door fans wereldwijd",
+    "exclusiveOfferBadge": "Speciale aanbieding",
+    "exclusiveOfferTag": "Nieuw",
+    "exclusiveOfferText": "Een exclusieve lanceeraanbieding tegen een speciale prijs — voor beperkte tijd.",
+    "exclusiveOfferCta": "Profiteer van de aanbieding"
   },
   "features": {
     "shipping": "Internationale verzending",

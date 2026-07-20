@@ -70,7 +70,11 @@
     "newsletterText": "Accedi in anteprima alle nuove maglie e alle esclusive dei Mondiali.",
     "newsletterCta": "Iscriviti",
     "faq": "Domande frequenti",
-    "partners": "Scelto dai tifosi di tutto il mondo"
+    "partners": "Scelto dai tifosi di tutto il mondo",
+    "exclusiveOfferBadge": "Offerta speciale",
+    "exclusiveOfferTag": "Nuovo",
+    "exclusiveOfferText": "Un lancio esclusivo a prezzo speciale — solo per un tempo limitato.",
+    "exclusiveOfferCta": "Approfitta dell'offerta"
   },
   "features": {
     "shipping": "Spedizione internazionale",

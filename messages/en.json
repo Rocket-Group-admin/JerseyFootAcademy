@@ -70,7 +70,11 @@
     "newsletterText": "Get early access to new kits and exclusive World Cup drops.",
     "newsletterCta": "Subscribe",
     "faq": "Frequently Asked Questions",
-    "partners": "Trusted by fans worldwide"
+    "partners": "Trusted by fans worldwide",
+    "exclusiveOfferBadge": "Special Offer",
+    "exclusiveOfferTag": "New",
+    "exclusiveOfferText": "An exclusive launch offer at a special price — for a limited time only.",
+    "exclusiveOfferCta": "Shop the offer"
   },
   "features": {
     "shipping": "International Shipping",
