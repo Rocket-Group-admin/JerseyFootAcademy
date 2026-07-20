@@ -33,6 +33,7 @@ export async function Footer() {
         { href: "/contact", label: "Contact" },
         { href: "/privacy", label: "Privacy Policy" },
         { href: "/terms", label: "Terms of Service" },
+        { href: "/refund-policy", label: "Refund Policy" },
       ],
     },
   ];
