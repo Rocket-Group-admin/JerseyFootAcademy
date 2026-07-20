@@ -24,8 +24,8 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero />
       <VictoryBanner />
+      <Hero />
       <ExclusiveOffer />
       <FeatureBar />
 
