@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-const GA_ID = "G-CVXDTLV12G";
+const GA_ID = "G-04RE1P3HRY";
 
 /** Google tag (gtag.js) — site-wide pageview tracking. */
 export function GoogleAnalytics() {
