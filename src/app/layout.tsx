@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/footer";
 import { Providers } from "@/components/providers";
 import { MetaPixel } from "@/components/meta-pixel";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { ConsentBanner } from "@/components/consent-banner";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -67,6 +68,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable} ${anton.variable}`}>
       <body className="flex min-h-screen flex-col">
+        <ConsentBanner />
         <MetaPixel />
         <GoogleAnalytics />
         <NextIntlClientProvider locale={locale} messages={messages}>
